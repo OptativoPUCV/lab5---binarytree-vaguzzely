@@ -79,6 +79,15 @@ void insertTreeMap(TreeMap * tree, void* key, void * value) {
   TreeNode * new = createTreeNode(key, value); // crea un nuevo nodo con la clave y valor dados
   TreeNode * parent = NULL;
   TreeNode * current = tree->root;
+  do{
+    // busca la posición donde insertar el nuevo nodo
+    parent = current;
+    if (tree->lower_than(key, current->pair->key)) {
+      current = current->left;
+    } else {
+      current = current->right;
+    }
+  }while (current != NULL);
   
 
 }

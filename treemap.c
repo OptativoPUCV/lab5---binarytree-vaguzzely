@@ -118,7 +118,16 @@ Recuerde hacer que el current apunte al nodo encontrado.
     }
 */
 
-Pair * searchTreeMap(TreeMap * tree, void* key) {
+Pair * searchTreeMap(TreeMap * tree, void* key) 
+{
+  TreeNode* node = tree->root; // empieza la búsqueda en la raíz
+  do{
+    
+    
+  }
+  while (node != NULL) // Mientras no se haya llegado al final del árbol
+  
+  
     return NULL;
 }
 /*7.- La función Pair* upperBound(TreeMap* tree, void* key) retorna el **Pair** con clave igual a key. En caso de no encontrarlo retorna el primer par asociado a una clave mayor o igual a key. 

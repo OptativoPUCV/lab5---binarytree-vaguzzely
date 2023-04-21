@@ -185,3 +185,47 @@ test.c:503:5: error: ‘main’ defined but not used [-Werror=unused-function]
 cc1: all warnings being treated as errors
 Compilation failed
 5bff2f0
+Fri 21 Apr 2023 06:26:15 PM UTC: 
+ treemap.c | 15 +++++++++++----
+ 1 file changed, 11 insertions(+), 4 deletions(-)
+In file included from test.c:4:
+treemap.c:121:1: error: unknown type name ‘It’
+  121 | It seems like you have a problem with your code. The error is that the `while` loop is not correctly placed. Here's the corrected version of your code:
+      | ^~
+treemap.c:121:10: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘like’
+  121 | It seems like you have a problem with your code. The error is that the `while` loop is not correctly placed. Here's the corrected version of your code:
+      |          ^~~~
+treemap.c:121:10: error: unknown type name ‘like’
+treemap.c:121:72: error: stray ‘`’ in program
+  121 | It seems like you have a problem with your code. The error is that the `while` loop is not correctly placed. Here's the corrected version of your code:
+      |                                                                        ^
+treemap.c:121:78: error: stray ‘`’ in program
+  121 | It seems like you have a problem with your code. The error is that the `while` loop is not correctly placed. Here's the corrected version of your code:
+      |                                                                              ^
+treemap.c:121:114: error: missing terminating ' character [-Werror]
+  121 | It seems like you have a problem with your code. The error is that the `while` loop is not correctly placed. Here's the corrected version of your code:
+      |                                                                                                                  ^
+treemap.c:121:114: error: missing terminating ' character
+  121 | It seems like you have a problem with your code. The error is that the `while` loop is not correctly placed. Here's the corrected version of your code:
+      |                                                                                                                  ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+treemap.c:123:1: error: stray ‘`’ in program
+  123 | ```c
+      | ^
+treemap.c:123:2: error: stray ‘`’ in program
+  123 | ```c
+      |  ^
+treemap.c:123:3: error: stray ‘`’ in program
+  123 | ```c
+      |   ^
+treemap.c:141:1: error: stray ‘`’ in program
+  141 | ```
+      | ^
+treemap.c:141:2: error: stray ‘`’ in program
+  141 | ```
+      |  ^
+treemap.c:141:3: error: stray ‘`’ in program
+  141 | ```
+      |   ^
+cc1: all warnings being treated as errors
+Compilation failed
+b95c157

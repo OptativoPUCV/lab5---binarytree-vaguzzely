@@ -36,3 +36,9 @@ treemap.c:41:15: note: previous definition of ‘createTreeMap’ with type ‘T
       |               ^~~~~~~~~~~~~
 Compilation failed
 d388966
+Fri 21 Apr 2023 05:58:21 PM UTC: 
+ treemap.c | 5 -----
+ 1 file changed, 5 deletions(-)
+ tests:  4|7
+total_score: 5/70
+0552078

@@ -212,8 +212,9 @@ Pair * upperBound(TreeMap * tree, void* key) {
 Pair * firstTreeMap(TreeMap * tree) 
 {
   if (tree == NULL || tree->root == NULL) return NULL; // si el árbol está vacío, retorna NULL
-
- 
+  
+  TreeNode * current = tree->root;
+  
 }
 
 Pair * nextTreeMap(TreeMap * tree) {

@@ -89,6 +89,16 @@ void insertTreeMap(TreeMap * tree, void* key, void * value) {
     }
   }while (current != NULL);
   
+  
+  new->parent = parent; // enlaza el nuevo nodo con su padre
+  
+  if (parent == NULL) { // si el árbol está vacío
+    tree->root = new;
+  } else if (tree->lower_than(key, parent->pair->key)) { // si la clave es menor que la clave del padre
+    parent->left = new; // inserta el nuevo nodo a la izquierda del padre
+  } else {
+    parent->right = new; // inserta el nuevo nodo a la derecha del padre
+  }
 
 }
 /*

@@ -76,6 +76,9 @@ Para insertar un dato, primero debe realizar una búsqueda para encontrar donde 
 
 void insertTreeMap(TreeMap * tree, void* key, void * value) {
   if (searchTreeMap(tree, key) != NULL) return; // si la clave ya existe en el árbol, retorna sin hacer nada
+  TreeNode * new = createTreeNode(key, value); // crea un nuevo nodo con la clave y valor dados
+  TreeNode * parent = NULL;
+  TreeNode * current = tree->root;
   
 
 }

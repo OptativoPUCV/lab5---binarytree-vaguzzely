@@ -24,3 +24,15 @@ treemap.c:41:15: note: previous definition of ‘createTreeMap’ with type ‘T
 cc1: all warnings being treated as errors
 Compilation failed
 e952001
+Fri 21 Apr 2023 05:58:01 PM UTC: 
+ treemap.c | 12 +++++-------
+ 1 file changed, 5 insertions(+), 7 deletions(-)
+In file included from test.c:4:
+treemap.c:50:11: error: redefinition of ‘createTreeMap’
+   50 | TreeMap * createTreeMap(int (*lower_than) (void* key1, void* key2)) {
+      |           ^~~~~~~~~~~~~
+treemap.c:41:15: note: previous definition of ‘createTreeMap’ with type ‘TreeMap *(int (*)(void *, void *))’
+   41 |     TreeMap * createTreeMap(int (*lt) (void* key1, void* key2))
+      |               ^~~~~~~~~~~~~
+Compilation failed
+d388966

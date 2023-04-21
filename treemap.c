@@ -47,18 +47,53 @@ El siguiente código muestra como inicializar la función de comparación. Reser
   return nuevo;
 }
 
+/*
+3.- Implemente la función void insertTreeMap(TreeMap * tree, void* key, void * value). Esta función inserta un nuevo dato (key,value) en el árbol y hace que el current apunte al nuevo nodo.
+Para insertar un dato, primero debe realizar una búsqueda para encontrar donde debería ubicarse. Luego crear el nuevo nodo y enlazarlo. Si la clave del dato ya existe retorne sin hacer nada (recuerde que el mapa no permite claves repetidas).
+   
+    void insertTreeMap(TreeMap* tree, void* key, void* value){
 
+
+    }*/
 
 void insertTreeMap(TreeMap * tree, void* key, void * value) {
 
 }
+/*
+4.- Implemente la función TreeNode * minimum(TreeNode * x). Esta función retorna el **nodo con la mínima clave** ubicado en el subárbol con raiz x. Para obtener el nodo tiene que, a partir del nodo x, irse por la rama izquierda hasta llegar al final del subárbol. Si x no tiene hijo izquierdo se retorna el mismo nodo.
+   
+    TreeNode * minimum(TreeNode * x){
 
+
+        return NULL;
+    }
+*/
 TreeNode * minimum(TreeNode * x){
 
     return NULL;
 }
 
+/*
+5.- Implemente la función void removeNode(TreeMap * tree, TreeNode* node). Esta función elimina el nodo *node* del árbol *tree*. Recuerde que para eliminar un node existen 3 casos:
+**Nodo sin hijos:** Se anula el puntero del padre que apuntaba al nodo
+**Nodo con un hijo:** El padre del nodo pasa a ser padre de su hijo
+**Nodo con dos hijos:** Descienda al hijo derecho y obtenga el menor nodo del subárbol (con la función minimum). Reemplace los datos (key,value) de *node* con los del nodo "minimum". Elimine el nodo minimum (para hacerlo puede usar la misma función *removeNode*).
 
+    void removeNode(TreeMap * tree, TreeNode* node) {
+
+
+    }
+
+La función removeNode será usada por la función *eraseTreeMap* para eliminar datos del árbol usando la clave.
+
+    void eraseTreeMap(TreeMap * tree, void* key){
+        if (tree == NULL || tree->root == NULL) return;
+        if (searchTreeMap(tree, key) == NULL) return;
+        TreeNode* node = tree->current;
+        removeNode(tree, node);
+    } 
+
+*/
 void removeNode(TreeMap * tree, TreeNode* node) {
 
 }
@@ -72,18 +107,47 @@ void eraseTreeMap(TreeMap * tree, void* key){
 
 }
 
+/*
+2.- Implemente la función Pair* searchTreeMap(TreeMap* tree, void* key), la cual busca el nodo con clave igual a key y retorna el **Pair** asociado al nodo. Si no se encuentra la clave retorna NULL.
+Recuerde hacer que el current apunte al nodo encontrado.
+
+    Pair* searchTreeMap(TreeMap* tree, void* key) {
 
 
+        return NULL;
+    }
+*/
 
 Pair * searchTreeMap(TreeMap * tree, void* key) {
     return NULL;
 }
+/*7.- La función Pair* upperBound(TreeMap* tree, void* key) retorna el **Pair** con clave igual a key. En caso de no encontrarlo retorna el primer par asociado a una clave mayor o igual a key. 
+Para implementarla puede realizar una búsqueda normal y usar un puntero a nodo auxiliar ub_node que vaya guardando el nodo con la menor clave *mayor o igual a key*. Finalmente retorne el par del nodo ub\_node.
 
+    Pair* upperBound(TreeMap* tree, void* key){
+        
+
+    }
+
+*/
 
 Pair * upperBound(TreeMap * tree, void* key) {
     return NULL;
 }
+/*6.- Implemente las funciones para recorrer la estructura: Pair* firstTreeMap(TreeMap* tree) retorna el primer **Pair** del mapa (el menor). Pair* nextTreeMap(TreeMap* tree)  retornar el siguiente **Pair** del mapa a partir del puntero TreeNode* current. Recuerde actualizar este puntero.
 
+    Pair * firstTreeMap(TreeMap * tree) {
+        
+
+        return NULL;
+    }
+
+    Pair * nextTreeMap(TreeMap * tree) {
+       
+
+        return NULL;
+    }
+*/
 Pair * firstTreeMap(TreeMap * tree) {
     return NULL;
 }

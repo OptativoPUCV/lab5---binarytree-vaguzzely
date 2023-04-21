@@ -56,7 +56,26 @@ Para insertar un dato, primero debe realizar una búsqueda para encontrar donde 
 
     }*/
 
+/*Pair * searchTreeMap(TreeMap * tree, void* key) 
+{
+  TreeNode* node = tree->root; // empieza la búsqueda en la raíz
+  while (node != NULL) // mientras no haya llegado al final del árbol
+  {
+    if (is_equal(tree, node->pair->key, key)) { // si se logra encontrar la clave
+            tree->current = node; // actualiza el current
+            return node->pair; // retorna el pair asociado al nodo q se encontró
+        } else if (tree->lower_than(key, node->pair->key)) { // si la clave es menor que la clave del nodo actual, se va para la izquierda
+            node = node->left;
+        } else 
+    { // si la clave es menor que la clave del nodo actual, se va a la derecha
+            node = node->right;
+    }
+  }
+  return NULL;
+}*/
+
 void insertTreeMap(TreeMap * tree, void* key, void * value) {
+  
 
 }
 /*
@@ -94,7 +113,8 @@ La función removeNode será usada por la función *eraseTreeMap* para eliminar 
     } 
 
 */
-void removeNode(TreeMap * tree, TreeNode* node) {
+void removeNode(TreeMap * tree, TreeNode* node) 
+{
 
 }
 

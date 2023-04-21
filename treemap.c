@@ -214,6 +214,14 @@ Pair * firstTreeMap(TreeMap * tree)
   if (tree == NULL || tree->root == NULL) return NULL; // si el árbol está vacío, retorna NULL
   
   TreeNode * current = tree->root;
+
+  do{
+    current = current->left;
+  }while (current->left != NULL)
+ // busca el nodo más a la izquierda del árbol
+  }
+
+ 
   
 }
 

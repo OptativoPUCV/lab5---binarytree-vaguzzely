@@ -222,7 +222,6 @@ Pair * firstTreeMap(TreeMap * tree)
 
   tree->current = current; // actualiza el current
   return current->pair; // retorna el pair asociado al nodo encontrado
-  return NULL;
 }
 
 Pair * nextTreeMap(TreeMap * tree) {

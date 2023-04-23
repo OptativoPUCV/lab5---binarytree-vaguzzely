@@ -165,7 +165,7 @@ if((node->left == NULL) && (node->right == NULL))
     aux = minimum(aux);
     node->pair->key = aux->pair->key;
     node->pair->value = aux->pair->value;
-    
+    removeNode(tree, aux);
   }
   
 

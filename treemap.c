@@ -160,7 +160,11 @@ if((node->left == NULL) && (node->right == NULL))
   } 
   if(((node->left != NULL) && (node->right != NULL))) 
   {
-    
+    TreeNode * aux = node;
+    aux = aux->right;
+    aux = minimum(aux);
+    node->pair->key = aux->pair->key;
+    node->pair->value = aux->pair->value;
     
   }
   

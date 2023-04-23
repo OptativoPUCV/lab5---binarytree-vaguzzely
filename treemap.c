@@ -147,9 +147,9 @@ void removeNode(TreeMap * tree, TreeNode* node)
     }
     
     if (node->left == NULL && node->right == NULL) {
-        // El nodo a eliminar es una hoja
+        
         if (node->parent == NULL) {
-            // El nodo a eliminar es la raíz del árbol
+            // nodo a eliminar es el root del árbol
             tree->root = NULL;
         }
         else if (node->parent->left == node) {
@@ -239,7 +239,23 @@ Para implementarla puede realizar una búsqueda normal y usar un puntero a nodo 
 
 Pair * upperBound(TreeMap * tree, void* key) 
 {
-  
+  TreeNode *ub_node = NULL;
+  TreeNode *aux = tree->root;
+  while(aux != NULL){
+    if(is_equal(tree, aux->pair->key, key))
+    {
+      return aux->pair;
+    }
+    if(tree->lower_than(key, aux->pair->key))
+    {
+      ub_node = aux;
+            aux = aux->left;
+        }else{
+            aux = aux->right;
+        }
+    }
+    if(ub_node == NULL) return NULL;
+    return ub_node->pair;
   return NULL;
 }
 /*6.- Implemente las funciones para recorrer la estructura: Pair* firstTreeMap(TreeMap* tree) retorna el primer **Pair** del mapa (el menor). Pair* nextTreeMap(TreeMap* tree)  retornar el siguiente **Pair** del mapa a partir del puntero TreeNode* current. Recuerde actualizar este puntero.

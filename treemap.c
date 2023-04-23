@@ -143,19 +143,23 @@ La función removeNode será usada por la función *eraseTreeMap* para eliminar 
 */
 void removeNode(TreeMap * tree, TreeNode* node) 
 {
-  if((node->left == NULL) && (node->right == NULL))
+if((node->left == NULL) && (node->right == NULL))
   {
-    if(node->parent == NULL)
+  if(node->parent == NULL)
     {
-      tree->root = NULL; 
+     tree->root = NULL; 
     }
-      if(node->parent->right == node)
+    if(node->parent->right == node)
       {
-        node->parent->right == NULL;
-      
+        node->parent->right = NULL;
       }
-    
+    else
+    {
+      node->parent->left = NULL;
+    }
+    free(node);
   } 
+  if 
   
 
 }

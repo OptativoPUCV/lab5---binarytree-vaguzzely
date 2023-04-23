@@ -168,8 +168,42 @@ if((node->left == NULL) && (node->right == NULL))
     removeNode(tree, aux);
     return;
   }
-  
-
+  if(((node->right != NULL) && (node->left == NULL)) || ((node->right == NULL) && (node->left != NULL)))
+  {
+    if(node->parent == NULL)
+    {
+      if(node->left != NULL)
+      {
+        tree->root = node->right;
+      }
+    }
+  if(node->parent->right == node)
+  {
+    if(node->right != NULL)
+    {
+      node->parent->right = node->right;
+      node->right->parent = node->parent;
+    }
+    else
+    {
+      node->parent->right = node->left;
+      node->left->parent = node->parent;
+    }
+  }
+ else
+  {
+    if(node->left != NULL)
+    {
+      node->parent->left = node->left;
+      node->left->parent = node->parent;
+    }
+    else
+    {
+      node->parent->left = node->right;
+      node->right->parent = node->parent;
+    }
+  }
+free(node);
 }
 
 void eraseTreeMap(TreeMap * tree, void* key){
@@ -224,7 +258,6 @@ Para implementarla puede realizar una búsqueda normal y usar un puntero a nodo 
 
 Pair * upperBound(TreeMap * tree, void* key) 
 {
-  
   
   return NULL;
 }

@@ -654,3 +654,34 @@ treemap.c:320:5: error: control reaches end of non-void function [-Werror=return
 cc1: all warnings being treated as errors
 Compilation failed
 a8484f1
+Sun 23 Apr 2023 03:49:28 AM UTC: 
+In file included from test.c:4:
+treemap.c: In function ‘nextTreeMap’:
+treemap.c:298:6: error: ‘aux’ undeclared (first use in this function)
+  298 |   if(aux->right != NULL)
+      |      ^~~
+treemap.c:298:6: note: each undeclared identifier is reported only once for each function it appears in
+treemap.c:309:13: error: this ‘if’ clause does not guard... [-Werror=misleading-indentation]
+  309 |             if(aux->parent == NULL) return NULL; L;
+      |             ^~
+treemap.c:309:50: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the ‘if’
+  309 |             if(aux->parent == NULL) return NULL; L;
+      |                                                  ^
+treemap.c:309:50: error: ‘L’ undeclared (first use in this function)
+treemap.c:297:13: error: unused variable ‘a’ [-Werror=unused-variable]
+  297 |   TreeNode *a = tree->current;
+      |             ^
+treemap.c: At top level:
+treemap.c:321:3: error: expected identifier or ‘(’ before ‘return’
+  321 |   return NULL;
+      |   ^~~~~~
+treemap.c:322:1: error: expected identifier or ‘(’ before ‘}’ token
+  322 | }
+      | ^
+treemap.c: In function ‘nextTreeMap’:
+treemap.c:320:5: error: control reaches end of non-void function [-Werror=return-type]
+  320 |     }
+      |     ^
+cc1: all warnings being treated as errors
+Compilation failed
+42e5bd7

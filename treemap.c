@@ -172,18 +172,18 @@ void removeNode(TreeMap * tree, TreeNode* node)
     }
     
     // El nodo a eliminar tiene un hijo
-    TreeNode * child = (node->left != NULL) ? node->left : node->right;
+    TreeNode * aux = (node->left != NULL) ? node->left : node->right;
     if (node->parent == NULL) {
-        // El nodo a eliminar es la raíz del árbol
-        tree->root = child;
+        // nodo a eliminar es el root del árbol
+        tree->root = aux;
     }
     else if (node->parent->left == node) {
-        node->parent->left = child;
+        node->parent->left = aux;
     }
     else {
-        node->parent->right = child;
+        node->parent->right = aux;
     }
-    child->parent = node->parent;
+    aux->parent = node->parent;
     free(node);
 }
 

@@ -143,6 +143,16 @@ La función removeNode será usada por la función *eraseTreeMap* para eliminar 
 */
 void removeNode(TreeMap * tree, TreeNode* node) 
 {
+  if((node->left == NULL) && (node->right == NULL))
+  {
+    if(node->parent == NULL)
+    {
+      tree->root = NULL;
+      
+    }
+    
+  } 
+  
 
 }
 
@@ -196,8 +206,11 @@ Para implementarla puede realizar una búsqueda normal y usar un puntero a nodo 
 
 */
 
-Pair * upperBound(TreeMap * tree, void* key) {
-    return NULL;
+Pair * upperBound(TreeMap * tree, void* key) 
+{
+  
+  
+  return NULL;
 }
 /*6.- Implemente las funciones para recorrer la estructura: Pair* firstTreeMap(TreeMap* tree) retorna el primer **Pair** del mapa (el menor). Pair* nextTreeMap(TreeMap* tree)  retornar el siguiente **Pair** del mapa a partir del puntero TreeNode* current. Recuerde actualizar este puntero.
 

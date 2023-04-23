@@ -241,7 +241,8 @@ Pair * upperBound(TreeMap * tree, void* key)
 {
   TreeNode *ub_node = NULL;
   TreeNode *aux = tree->root;
-  while(aux != NULL){
+  while(aux != NULL)
+  {
     if(is_equal(tree, aux->pair->key, key))
     {
       return aux->pair;
@@ -250,10 +251,12 @@ Pair * upperBound(TreeMap * tree, void* key)
     {
       ub_node = aux;
             aux = aux->left;
-        }else{
-            aux = aux->right;
         }
+    else
+    {
+      aux = aux->right;
     }
+  }
     if(ub_node == NULL)
     {
       return NULL;

@@ -292,6 +292,35 @@ Pair * firstTreeMap(TreeMap * tree)
   return current->pair; // retorna el pair asociado al nodo encontrado
 }
 
-Pair * nextTreeMap(TreeMap * tree) {
-    return NULL;
+Pair * nextTreeMap(TreeMap * tree) 
+{
+  TreeNode *aux = tree->current;
+  if(aux->right != NULL)
+  {
+    aux = aux->right;
+    aux = minimum(aux);
+    tree->current = aux;
+    return aux->pair;
+  }
+
+    if(aux->right == NULL)
+    {
+      while(aux != NULL)
+      {
+        if(aux->parent == NULL) return NULL;
+        if(aux == tree->root) return NULL;
+        if(tree->lower_than(aux->pair->key, aux->parent->pair->key) == 1)
+        {
+          aux = aux->parent;
+          tree->current = aux;
+          return aux->pair;
+        } 
+        else 
+        {
+          aux = aux->parent;
+        }
+      }
+    }
+  return NULL;
 }
+

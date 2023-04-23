@@ -158,7 +158,11 @@ if((node->left == NULL) && (node->right == NULL))
       node->parent->left = NULL;
     }
   } 
-  if(((node->left != NULL) && (node->right != NULL)))
+  if(((node->left != NULL) && (node->right != NULL))) 
+  {
+    
+    
+  }
   
 
 }

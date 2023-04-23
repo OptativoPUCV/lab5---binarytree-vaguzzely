@@ -157,9 +157,8 @@ if((node->left == NULL) && (node->right == NULL))
     {
       node->parent->left = NULL;
     }
-    free(node);
   } 
-  if 
+  if(((node->left != NULL) && (node->right != NULL)))
   
 
 }

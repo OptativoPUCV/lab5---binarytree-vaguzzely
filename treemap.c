@@ -307,8 +307,14 @@ Pair * nextTreeMap(TreeMap * tree)
     {
       while(aux != NULL)
       {
-        if(aux->parent == NULL) return NULL;
-        if(aux == tree->root) return NULL;
+        if(aux->parent == NULL)
+        {
+          return NULL;
+        }
+        if(aux == tree->root) 
+        {
+          return NULL;
+        }
         if(tree->lower_than(aux->pair->key, aux->parent->pair->key) == 1)
         {
           aux = aux->parent;
